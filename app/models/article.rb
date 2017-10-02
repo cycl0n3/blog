@@ -14,4 +14,8 @@ class Article < ApplicationRecord
   def long_title
     "#{title} - #{published_at}"
   end
+
+  def published?
+    published_at.present?
+  end
 end
