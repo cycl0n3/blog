@@ -4,7 +4,8 @@
         <%= comment.name %> &lt;<%= comment.email %>&gt; said:
         <span class='actions'>
           <%= link_to 'Delete',
-                      article_comment_path(:article_id => @article, :id => comment),
+                      # article_comment_path(:article_id => @article, :id => comment),
+                      [@article, comment],
                       data: { confirm: 'Are you sure?' },
                       method: :delete %>
         </span>
