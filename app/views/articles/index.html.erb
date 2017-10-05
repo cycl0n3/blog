@@ -10,6 +10,7 @@
       <th>Excerpt</th>
       <th>Body</th>
       <th>Published at</th>
+      <th>Comments</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,7 @@
         <td><%= article.excerpt %></td>
         <td><%= article.body %></td>
         <td><%= article.published_at %></td>
+        <td><%= article.comments.size %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
