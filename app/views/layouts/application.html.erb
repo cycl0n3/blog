@@ -7,7 +7,11 @@
   </head>
 
   <body>
+    <%= content_tag :p, notice, :class => 'notice' if notice.present? %>
+    <%= content_tag :p, alert, :class => 'alert' if alert.present? %>
+
     <%= yield %>
+
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
